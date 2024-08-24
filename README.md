@@ -8,7 +8,7 @@ This module acts as a middleware for communication between different processes u
         <img alt="PyPI" src="https://img.shields.io/pypi/v/metaros">
     </a>
     <a href="https://github.com/AnshulRanjan2004/Meta-ROS/actions/workflows/python-publish.yml">
-        <img alt="Wheels" src="https://github.com/AnshulRanjan2004/Meta-ROS/actions/workflows/python-publish.yml/badge.svg">
+        <img alt="Wheels" src="">
     </a>
     <a href="https://github.com/AnshulRanjan2004/Meta-ROS">
     	<img src="https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS-blue.svg" alt="platforms" />
