@@ -10,10 +10,8 @@ import zmq.asyncio
 from metaros.messages import Header, Message
 from metaros.topic import validate_topic
 
-
 if sys.platform == 'win32':
    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-
 
 class Subscriber:
     def __init__(
