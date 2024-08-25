@@ -23,10 +23,7 @@ This module acts as a middleware for communication between different processes u
 </p>
 
 ## Why Meta-ROS?
-
-
-
-
+A middleware solution designed for process communication, incorporating Publisher, Subscriber, and MessageBroker classes. It handles various message types, including strings, integers, and floats, facilitating seamless data exchange. This module fosters a cohesive and scalable robotics environment, driving innovation and research by enabling efficient communication and robust integration across different systems.
 
 ## Installation
 To install the library, use pip:
