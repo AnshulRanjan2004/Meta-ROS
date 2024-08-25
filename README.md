@@ -23,3 +23,13 @@ This module acts as a middleware for communication between different processes u
 </p>
 
 ## Why Meta-ROS?
+
+
+
+
+
+## Installation
+To install the library, use pip:
+
+```bash
+pip install metaros
