@@ -41,7 +41,7 @@ The `MessageBroker` class is used to create a message broker that can be used by
 publishers and subscribers to communicate with each other.
 
 ```python
-from zeroros import MessageBroker
+from metaros import MessageBroker
 
 broker = MessageBroker()
 ```
@@ -53,7 +53,7 @@ message type is a Python class. The message type is used to serialize and deseri
 messages.
 
 ```python
-from zeroros import Publisher
+from metaros import Publisher
 
 pub = Publisher("topic_name", String)
 pub.publish("Hello world!")
@@ -67,7 +67,7 @@ messages.
 
 ```python
 import time
-from zeroros import Subscriber
+from metaros import Subscriber
 
 def callback(msg):
     print(msg)
