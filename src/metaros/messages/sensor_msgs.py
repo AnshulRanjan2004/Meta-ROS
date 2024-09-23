@@ -63,3 +63,44 @@ class LaserScan(Message):
         self.ranges = np.array(msg["ranges"])
         self.intensities = np.array(msg["intensities"])
         self.angles = np.array(msg["angles"])
+
+class Image(Message):
+    def __init__(self, height=None, width=None, encoding="", is_bigendian=0, step=0, data=[]):
+        self.header = Header()  # Initialize header
+        self.height = height    # Number of rows
+        self.width = width      # Number of columns
+        self.encoding = encoding  # Encoding of pixels (e.g., RGB8, BGR8)
+        self.is_bigendian = is_bigendian  # Is the data in big-endian format?
+        self.step = step  # Full row length in bytes
+        self.data = np.array(data, dtype=np.uint8).reshape((height, step)) if data else np.array([])  # Actual matrix data
+
+    def __str__(self):
+        msg = "Image Message\n"
+        msg += str(self.header)
+        msg += "Height:       " + str(self.height) + "\n"
+        msg += "Width:        " + str(self.width) + "\n"
+        msg += "Encoding:     " + str(self.encoding) + "\n"
+        msg += "Is Bigendian: " + str(self.is_bigendian) + "\n"
+        msg += "Step:         " + str(self.step) + "\n"
+        msg += "Data:         " + str(self.data) + "\n"
+        return msg
+
+    def to_json(self):
+        return {
+            "header": self.header.to_json(),
+            "height": self.height,
+            "width": self.width,
+            "encoding": self.encoding,
+            "is_bigendian": self.is_bigendian,
+            "step": self.step,
+            "data": self.data.flatten().tolist(),
+        }
+
+    def from_json(self, msg):
+        self.header.from_json(msg["header"])
+        self.height = msg["height"]
+        self.width = msg["width"]
+        self.encoding = msg["encoding"]
+        self.is_bigendian = msg["is_bigendian"]
+        self.step = msg["step"]
+        self.data = np.array(msg["data"], dtype=np.uint8).reshape((self.height, self.step))
