@@ -101,6 +101,7 @@ following messages are available:
 * `nav_msgs.Odometry`
 * `nav_msgs.Path`
 * `sensors_msgs.LaserScan`
+* `sensors_msgs.Image`
 * More to come...
 
 
