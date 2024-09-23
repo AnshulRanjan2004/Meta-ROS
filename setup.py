@@ -25,7 +25,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="metaros",
-    version="1.0.5",
+    version="1.1.5",
     description="Meta-ROS middleware",
     long_description=long_description,
     long_description_content_type="text/markdown",

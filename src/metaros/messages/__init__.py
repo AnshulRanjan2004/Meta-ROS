@@ -21,7 +21,7 @@ from .geometry_msgs import (
     PoseWithCovariance,
     TwistWithCovariance,
 )  # noqa: F401
-from .sensor_msgs import LaserScan  # noqa: F401
+from .sensor_msgs import LaserScan, Image  # noqa: F401
 from .nav_msgs import Odometry, Path  # noqa: F401
 from .std_msgs import (
     Header,
