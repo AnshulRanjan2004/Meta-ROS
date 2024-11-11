@@ -28,7 +28,7 @@ jobs:
         with:
           name: sdist-artifact  # Matching the name from the upload step
           path: dist
-      - uses: pypa/gh-action-pypi-publish@v1.10.2
+      - uses: pypa/gh-action-pypi-publish@v1.12.2
         with:
           skip-existing: true  # Updated to kebab-case
           user: __token__
