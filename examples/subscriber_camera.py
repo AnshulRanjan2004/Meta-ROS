@@ -38,7 +38,7 @@ def callback(msg: SensorImage):
 
 def main():
     # Create a subscriber to the /camera_image topic
-    sub = Subscriber("/camera_image", SensorImage, callback)
+    sub = Subscriber("/camera_image", SensorImage, callback,ip="192.168.135.134", port=5556)
     print("Subscribed to /camera_image")
     print("Press Ctrl+C to stop.")
     
